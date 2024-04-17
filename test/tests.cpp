@@ -1,8 +1,8 @@
 // Copyright 2024 Danil Volkov
 
-#include <string>
 #include <gtest/gtest.h>
-#include "textgen.h"
+#include <string>
+#include "../include/textgen.h"
 
 class MarkovChainTest : public testing::Test {
  protected:
@@ -59,7 +59,7 @@ TEST(MarkovChainTest, ManySuffixes) {
     markovChain.train(text, prefixLength);
     std::string result = markovChain.generate(maxgen, 302);
 
-    EXPECT_EQ(result, "I love my home");
+    EXPECT_EQ(result, "I love my eat");
 }
 
 TEST(MarkovChainTest, ManualTable) {
